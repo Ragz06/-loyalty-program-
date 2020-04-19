@@ -1,4 +1,4 @@
-# -loyalty-program Sservice for a restaurant
+# -loyalty-program service for a restaurant
 ### Student Details
 ### Student Name: Ragaavi D
 ### Year: III
