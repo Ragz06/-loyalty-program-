@@ -1,0 +1,461 @@
+<style>
+body {
+  padding-top: 80px;
+}
+
+.show-cart li {
+  display: flex;
+}
+a .card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+</style>
+
+
+<!-- Nav -->
+<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Total order (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Cancel order</button></div>
+    </div>
+ </nav>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
+  <!-- Main -->
+  <div class="container">
+    <div class="row">
+      
+	  <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\a.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			 <h4 class="card-title">Salad</h4>
+             <p class="card-text">Price: rs.78</p>
+             <a href="#" data-name="Salad" data-price="75" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		  </div>
+        </div>
+      </div>
+	  
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\b.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Sandwich</h4>
+            <p class="card-text">Price: rs.42</p>
+            <a href="#" data-name="Sandwich" data-price="42" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		 </div>
+        </div>
+      </div>
+	  
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\c.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Burger</h4>
+            <p class="card-text">Price: rs.65</p>
+            <a href="#" data-name="Burger" data-price="65" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		  </div>
+        </div>
+      </div>
+	  
+    </div>
+  </div>
+
+  <br><br>
+  
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\d.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Masala Dosa</h4>
+            <p class="card-text">Price: rs.55</p>
+            <a href="#" data-name="Masala Dosa" data-price="55" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		  </div>
+        </div>
+      </div>
+      
+	  <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\e.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Parotta</h4>
+            <p class="card-text">Price: rs.22</p>
+            <a href="#" data-name="Parotta" data-price="22" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		 </div>
+        </div>
+      </div>
+      
+	  <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\f.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Idly</h4>
+            <p class="card-text">Price: rs.25</p>
+            <a href="#" data-name="Idly" data-price="25" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		  </div>
+        </div>
+      </div>
+    
+	</div>
+  </div>
+
+  <br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\g.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Full meal</h4>
+            <p class="card-text">Price: rs.85</p>
+            <a href="#" data-name="Meal" data-price="85" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		  </div>
+        </div>
+      </div>
+  
+	<div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\h.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Chat</h4>
+            <p class="card-text">Price: rs.25</p>
+            <a href="#" data-name="Chat" data-price="25" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		 </div>
+        </div>
+      </div>
+    
+	<div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="img\i.jpg" alt="Card image cap">
+          <div class="card-block">
+            <center>
+			<h4 class="card-title">Sweet</h4>
+            <p class="card-text">Price: rs.45</p>
+            <a href="#" data-name="Sweet" data-price="45" class="add-to-cart btn btn-primary">ORDER</a><br><br>
+			</center>
+		  </div>
+        </div>
+      </div>
+
+	  </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Summary</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+		 
+       <div class="modal-body">
+         <table class="show-cart table">   </table>
+          <div>Total price: Rs.<span class="total-cart"></span></div>
+		   <label for="start">Date of visit:</label>
+		    <input type="date" id="start" name="trip-start">
+		     <br>
+		      <h3 style="color:	#DAA520;">2nd Visit Offers</h3> <h3 style="color:red;">One dish free!</h3>
+				  <img src="img\j.png" class="image2" style="border-radius:50%;width:20%;">
+				  <img src="img\k.jpg" class="image2" style="border-radius:50%;width:20%;">
+				  <img src="img\l.jpg" class="image2" style="border-radius:50%;width:10%;">
+				<h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Shahi Paneer &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 Dal Makhni 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Baingan Bhaja </h6>
+				<br>
+				  <h3 style="color:	#DAA520;">5th Visit Offers</h3> <h3 style="color:red;">Redeem a dish of your choice!</h3>
+				  <img src="img\mm.jpg" class="image2" style="border-radius:50%;width:20%;">
+				  <img src="img\n.jpg" class="image2" style="border-radius:50%;width:20%;">
+				  <img src="img\o.png" class="image2" style="border-radius:50%;width:20%;">
+				<h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Chicken biriyani &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 Veg Platter 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non-veg Platter </h6>
+				  
+		
+		<div>
+		<table class="show-cart table">
+  
+          </table>
+		  </div>
+		
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="myFunction()">Order now</button>
+		 <br><br>
+		
+        </div>
+		 <p id="demo"></p>
+      </div>
+    
+	
+
+
+
+
+
+
+
+<script>
+function myFunction() {
+  var time = new Date().getHours();
+  
+    document.getElementById("demo").innerHTML = "HAVE A GOOD DAY" ;
+  
+}
+</script>
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script>
+
+  
+var shoppingCart = (function () {
+  // =============================
+  // Private methods and propeties
+  // =============================
+  cart = [];
+
+  // Constructor
+  function Item(name, price, count) 
+{
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+
+  // Save cart
+  function saveCart() {
+    sessionStorage.setItem("shoppingCart", JSON.stringify(cart));
+  }
+
+  // Load cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+
+  // =============================
+  // Public methods and propeties
+  // =============================
+  var obj = {};
+
+  // ORDER
+  obj.addItemToCart = function (name, price, count) {
+    for (var item in cart) {
+      if (cart[item].name === name) {
+        cart[item].count++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  };
+  // Set count from item
+  obj.setCountForItem = function (name, count) {
+    for (var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  // Remove item from cart
+  obj.removeItemFromCart = function (name) {
+    for (var item in cart) {
+      if (cart[item].name === name) {
+        cart[item].count--;
+        if (cart[item].count === 0) {
+          cart.splice(item, 1);
+        }
+        break;
+      }
+    }
+    saveCart();
+  };
+
+  // Remove all items from cart
+  obj.removeItemFromCartAll = function (name) {
+    for (var item in cart) {
+      if (cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  };
+
+  // Clear cart
+  obj.clearCart = function () {
+    cart = [];
+    saveCart();
+  };
+
+  // Count cart
+  obj.totalCount = function () {
+    var totalCount = 0;
+    for (var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  };
+
+  // Total cart
+  obj.totalCart = function () {
+    var totalCart = 0;
+    for (var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  };
+
+  // List cart
+  obj.listCart = function () {
+    var cartCopy = [];
+    for (i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for (p in item) {
+        itemCopy[p] = item[p];
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy);
+    }
+    return cartCopy;
+  };
+
+  // cart : Array
+  // Item : Object/Class
+  // addItemToCart : Function
+  // removeItemFromCart : Function
+  // removeItemFromCartAll : Function
+  // clearCart : Function
+  // countCart : Function
+  // totalCart : Function
+  // listCart : Function
+  // saveCart : Function
+  // loadCart : Function
+  return obj;
+})();
+
+// *****************************************
+// Triggers / Events
+// *****************************************
+// Add item
+$(".add-to-cart").click(function (event) {
+  event.preventDefault();
+  var name = $(this).data("name");
+  var price = Number($(this).data("price"));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
+});
+
+// Clear items
+$(".clear-cart").click(function () {
+  shoppingCart.clearCart();
+  displayCart();
+});
+
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for (var i in cartArray) {
+    output +=
+      "<tr>" +
+      "<td>" +
+      cartArray[i].name +
+      "</td>" +
+      "<td>(" +
+      cartArray[i].price +
+      ")</td>" +
+      "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" +
+      cartArray[i].name +
+      ">-</button>" +
+      "<input type='number' class='item-count form-control' data-name='" +
+      cartArray[i].name +
+      "' value='" +
+      cartArray[i].count +
+      "'>" +
+      "<button class='plus-item btn btn-primary input-group-addon' data-name=" +
+      cartArray[i].name +
+      ">+</button></div></td>" +
+      "<td><button class='delete-item btn btn-danger' data-name=" +
+      cartArray[i].name +
+      ">X</button></td>" +
+      " = " +
+      "<td>" +
+      cartArray[i].total +
+      "</td>" +
+      "</tr>";
+  }
+  $(".show-cart").html(output);
+  $(".total-cart").html(shoppingCart.totalCart());
+  $(".total-count").html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$(".show-cart").on("click", ".delete-item", function (event) {
+  var name = $(this).data("name");
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+});
+
+// -1
+$(".show-cart").on("click", ".minus-item", function (event) {
+  var name = $(this).data("name");
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+});
+// +1
+$(".show-cart").on("click", ".plus-item", function (event) {
+  var name = $(this).data("name");
+  shoppingCart.addItemToCart(name);
+  displayCart();
+});
+
+// Item count input
+$(".show-cart").on("change", ".item-count", function (event) {
+  var name = $(this).data("name");
+  var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+ 
+  displayCart();
+});
+
+displayCart();
+
+</script>
+
+
+
+</div>
